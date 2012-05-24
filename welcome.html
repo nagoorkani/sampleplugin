@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>PhoneGap</title>
+<script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+<script type="text/javascript" src="welcome.js"></script>
+
+<script type="text/javascript" >
+
+	function loadMessage(){
+	    //window.plugins.welcome.display(function(r){alert(r);}, function(e){alert(e);});
+	    window.plugins.AccountList.get(
+        function (res) {
+            console.log(res.length);
+    		for (i in res)
+    		    console.log(res[i]);
+        },
+        function (error) {
+            console.log(error);
+        }
+    	);
+	}
+	
+	
+	
+</script>
+
+</head>
+<body>
+	<input type="button" value="Click" onClick="loadMessage()"/>
+</body>
+</html>
